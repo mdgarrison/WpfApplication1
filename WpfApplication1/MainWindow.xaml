@@ -8,7 +8,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Images/sema-2016-sports-gallery-40.jpg"/>
+            <ImageBrush ImageSource="Images/Azul.jpg"/>
         </Grid.Background>
         <Rectangle HorizontalAlignment="Left" Height="57" Margin="45,137,0,0" VerticalAlignment="Top" Width="185">
             <Rectangle.Stroke>
@@ -20,14 +20,11 @@
         </Rectangle>
         <Rectangle HorizontalAlignment="Left" Height="53" Margin="47,139,0,0" VerticalAlignment="Top" Width="181" Fill="Black" Stroke="Black"/>
         <Rectangle Fill="#FFAAAA82" HorizontalAlignment="Left" Height="49" Margin="49,141,0,0" Stroke="#FFAAAA82" VerticalAlignment="Top" Width="177"/>
-        <Label x:Name="label" Content="1134.00" HorizontalAlignment="Left" Margin="124,141,0,0" VerticalAlignment="Top" Height="49" Width="102" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Verdana" FontSize="22" Foreground="#FF282828"/>
-        <Label x:Name="label1" Content="FREQ" Background="#FF282828" Foreground="#FFAAAA82" HorizontalAlignment="Left" Margin="50,142,0,0" VerticalAlignment="Top" Height="21" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Verdana" FontSize="10" Width="37"/>
+        <TextBlock x:Name="label" Text="{Binding ElementName=slider, Path=Value, StringFormat=N2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="101,146,0,0" VerticalAlignment="Top" Height="39" Width="130" FontFamily="Verdana" FontSize="30" Foreground="#FF282828"/>
+        <TextBlock x:Name="label1" Text="FREQ" Background="#FF282828" Foreground="#FFAAAA82" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Verdana" FontSize="10" Width="27" Height="13" Margin="50,142,0,0" />
         <Label x:Name="label_Copy" Foreground="#FF282828" Content="MHz" HorizontalAlignment="Left" Margin="50,165,0,0" VerticalAlignment="Top" Height="25" Width="41" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Verdana" FontSize="15"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="86" Margin="47,216,0,0" VerticalAlignment="Top" Width="85" Source="Images/glowicon.png" Stretch="Fill"/>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="86" Margin="147,216,0,0" VerticalAlignment="Top" Width="83" Source="Images/metal_icon_by_mbgaming-d3j5hkb.png" Stretch="Fill"/>
-        <Image x:Name="image2" HorizontalAlignment="Left" Height="74" Margin="152,222,0,0" VerticalAlignment="Top" Width="74" Source="Images/unnamed.png"/>
-        <Image x:Name="image3" HorizontalAlignment="Left" Height="78" Margin="240,218,0,0" VerticalAlignment="Top" Width="80" Source="Images/003979-grunge-brushed-metal-pewter-icon-arrows-arrow-circle-refresh.png"/>
-        <Slider x:Name="slider" HorizontalAlignment="Left" Margin="45,102,0,0" VerticalAlignment="Top" Width="185"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Margin="45,102,0,0" VerticalAlignment="Top" Width="185" Value="{Binding SliderValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Minimum="0" Maximum="500" Interval="1"/>
         <RadioButton x:Name="radioButton" Content="MHz" HorizontalAlignment="Left" Margin="45,40,0,0" VerticalAlignment="Top" Width="117" Foreground="White" IsChecked="True"/>
         <RadioButton x:Name="radioButton_Copy" Content="kHz" HorizontalAlignment="Left" Margin="45,25,0,0" VerticalAlignment="Top" Width="117" Foreground="White"/>
         <RadioButton x:Name="radioButton_Copy1" Content="GHz" HorizontalAlignment="Left" Margin="45,55,0,0" VerticalAlignment="Top" Width="117" Foreground="White"/>
